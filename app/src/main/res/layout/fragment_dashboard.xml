@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DashboardFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.faltenreich.skeletonlayout.SkeletonLayout
+            android:id="@+id/dashboard_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/img_user_profile"
+                        app:shapeAppearanceOverlay="@style/CircleImageView"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@color/black"
+                        android:scaleType="centerCrop"
+                        />
+
+
+                    <com.faltenreich.skeletonlayout.SkeletonLayout
+                        android:id="@+id/tv_user_shimmer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="16dp">
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Username"
+                            android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall" />
+
+
+                    </com.faltenreich.skeletonlayout.SkeletonLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical">
+
+                    <TextClock
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:format24Hour="hh:mm"
+                        android:textSize="46sp"
+                        android:textStyle="bold"
+                        tools:text="00:00" />
+
+                    <TextClock
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:format24Hour="EEE, MMM dd"
+                        android:textSize="26sp"
+                        tools:text="Hari, Bulan 00" />
+
+                </LinearLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_attendance"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/black"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+                <Button
+                    android:id="@+id/upload_photo_attendance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Photo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/card_check_in"
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:layout_gravity="center"
+                            app:cardBackgroundColor="#689F38"
+                            app:cardCornerRadius="70dp"
+                            app:strokeWidth="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:layout_gravity="center"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_touch_app"
+                                    app:tint="@color/material_on_primary_emphasis_high_type" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Check In"
+                                    android:textColor="@color/material_on_primary_emphasis_high_type"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/card_check_out"
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:layout_gravity="center"
+                            app:cardBackgroundColor="#F44336"
+                            app:cardCornerRadius="70dp"
+                            app:strokeWidth="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:layout_gravity="center"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_touch_app"
+                                    app:tint="@color/material_on_primary_emphasis_high_type" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Check Out"
+                                    android:textColor="@color/material_on_primary_emphasis_high_type"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <com.faltenreich.skeletonlayout.SkeletonLayout
+                            android:id="@+id/tv_check_in_shimmer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:maskCornerRadius="8dp">
+
+                            <TextView
+                                android:id="@+id/tv_check_in"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="--:--"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                        </com.faltenreich.skeletonlayout.SkeletonLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Check In"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <com.faltenreich.skeletonlayout.SkeletonLayout
+                            android:id="@+id/tv_check_out_shimmer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            app:maskCornerRadius="8dp">
+
+                            <TextView
+                                android:id="@+id/tv_check_out"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="--:--"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                        </com.faltenreich.skeletonlayout.SkeletonLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Check Out"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_view_all_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="126dp"
+                    android:text="lihat daftar pengguna" />
+
+            </LinearLayout>
+
+        </com.faltenreich.skeletonlayout.SkeletonLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

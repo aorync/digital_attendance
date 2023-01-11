@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "255341336205",
+    "project_id": "image-database-cbd02",
+    "storage_bucket": "image-database-cbd02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255341336205:android:e22f2c76a53d12ad5234c4",
+        "android_client_info": {
+          "package_name": "com.syntxr.digitalattendance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "255341336205-54m18jqiurs37669sg3oougsgqfsogdu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWthubgzGymWGapNQHDGNvA0awzIvY2bM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "255341336205-54m18jqiurs37669sg3oougsgqfsogdu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

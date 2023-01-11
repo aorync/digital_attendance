@@ -1,0 +1,126 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+}
+
+android {
+    namespace 'com.syntxr.digitalattendance'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.syntxr.digitalattendance"
+        minSdk 22
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.0.1'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx:18.3.2'
+    implementation 'com.google.firebase:firebase-analytics-ktx:21.2.0'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    // PictureSelector basic (Necessary)
+    implementation 'io.github.lucksiege:pictureselector:v3.10.7'
+
+    // image compress library (Not necessary)
+    implementation 'io.github.lucksiege:compress:v3.10.7'
+
+    // uCrop library (Not necessary)
+//    implementation 'io.github.lucksiege:ucrop:v3.10.7'
+
+    // simple camerax library (Not necessary)
+    implementation 'io.github.lucksiege:camerax:v3.10.7'
+
+
+
+//    shimmer skeleton by faltenreich
+    implementation 'com.faltenreich:skeletonlayout:4.0.0'
+
+//    android tracker location
+    implementation 'com.github.quentin7b:android-location-tracker:4.0'
+
+    //    location access permission
+    implementation 'com.guolindev.permissionx:permissionx:1.7.1'
+
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+
+//    swipe to refresh
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+// view binding dependencies
+    implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.5.6'
+
+// encrypt password
+    implementation 'com.blankj:utilcodex:1.31.1'
+
+//    retrofit ()
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+//    gson (converter from json to data class kotlin)
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+//    coil/glide
+    implementation 'io.coil-kt:coil:2.2.2'
+
+// smart location
+//    implementation 'io.nlopez.smartlocation:library:3.3.3'
+
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+//    air location
+//    implementation 'com.github.mumayank:AirLocation:2.5.1'
+
+//    easy location
+    implementation 'com.github.robinkrsingh:easylocation:0.1.1'
+// image picker
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    // Add the dependencies for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
+
+}
